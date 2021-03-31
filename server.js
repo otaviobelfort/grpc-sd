@@ -71,7 +71,7 @@ const bd_bebida = [
         preco: 10.0,
     },
 ];
-const bd_pedido = [];
+var bd_pedido = [];
 
 
 const server = new grpc.Server();
@@ -111,9 +111,12 @@ server.addService(protoDescriptor.Delivery.service, {
         callback(null, {});
     },
     EntregarPedido: function(call, callback) {
-        const endereco = call.request.endereco;
+        const entrega = call.request.entrega;
 
-        bd_pedido.push(endereco);
+       bd_pedido[bd_pedido.length] = entrega;
+        console.log(entrega);
+
+        bd_pedido.push(0);
 
         callback(null, {});
     }

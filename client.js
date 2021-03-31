@@ -142,7 +142,7 @@ function AddPedidos(){
 // adiciona uma solicitação de entrega
 function AddEntrega(){
     client.EntregarPedido({
-        endereco: {
+        entrega: {
             endereco: "Av. dos Postugueses., nº 2000.",
             cliente: "Otávio Belfort",
             preco: "10.0",

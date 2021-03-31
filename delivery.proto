@@ -42,7 +42,7 @@ message ListarPedidos{
     repeated Massa pedidos = 1;
 }
 message umaEntrega {
-    Entrega endereco = 1;
+    Entrega entrega = 1;
 
 }
 
