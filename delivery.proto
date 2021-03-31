@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+package deliv;
+
+message Bebida {
+    string nome = 1;
+    int32 preco = 2;
+
+}
+message Entrega {
+    string endereco = 1;
+    string cliente = 2;
+    int32 preco = 3;
+
+}
+
+message Massa {
+    string nome = 1;
+    int32 preco = 2;
+
+}
+
+
+message Pedido {
+    string nome = 1;
+    int32 preco = 2;
+
+}
+
+
+
+
+message ListarBebidas{
+    repeated Bebida bebidas = 1;
+}
+
+message ListarMassas{
+    repeated Massa massas = 1;
+}
+
+message ListarPedidos{
+    repeated Massa pedidos = 1;
+}
+message umaEntrega {
+    Entrega endereco = 1;
+
+}
+
+message umaMassa {
+    Massa massa = 1;
+}
+
+message umaBebida {
+    Bebida bebida = 1;
+}
+
+message umPedido {
+    Bebida bebida = 1;
+    Massa massa = 2;
+
+}
+
+message Vazio {}
+
+service Delivery {
+    rpc ConsultarMassas (Vazio) returns (ListarMassas);
+    rpc ConsultarBebidas (Vazio) returns (ListarBebidas);
+    rpc CadastrarMassa (umaMassa) returns (Vazio);
+    rpc CadastrarBebida (umaBebida) returns (Vazio);
+    rpc PedidoDeBebida (umaBebida) returns (Vazio);
+    rpc EntregarPedido (umaEntrega) returns (Vazio);
+    //rpc CadastrarPedidos (umPedido) returns (Vazio);
+    rpc ConsultarPedidos (Vazio) returns (ListarPedidos);
+}

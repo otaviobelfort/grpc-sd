@@ -1,0 +1,22 @@
+{
+  "name": "grpc-sd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BELFORT, Otávio",
+  "license": "ISC",
+  "devDependencies": {
+    "grpc": "^1.24.6",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.2.12",
+    "@grpc/proto-loader": "^0.5.6",
+    "grpc-health-check": "^1.8.0",
+    "grpc-tools": "^1.11.1"
+  }
+}
