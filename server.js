@@ -112,11 +112,13 @@ server.addService(protoDescriptor.Delivery.service, {
     },
     EntregarPedido: function(call, callback) {
         const entrega = call.request.entrega;
-
-       bd_pedido[bd_pedido.length] = entrega;
-        console.log(entrega);
-
-        bd_pedido.push(0);
+        var ent = entrega;
+        bd_pedido[bd_pedido.length] = entrega;
+        //console.log(ent);
+        
+        Array.prototype.push.apply(bd_pedido, entrega);
+      // bd_pedido.Array.prototype.push(entrega);
+         console.log(bd_pedido);
 
         callback(null, {});
     }

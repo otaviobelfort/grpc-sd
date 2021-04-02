@@ -189,7 +189,7 @@ rl.addListener("line", line => {
         case "PEDIDOS":
             Pedidos();
             break;
-        case "ENTREGA":
+        case "ADD ENTREGA":
             AddEntrega();
             break;
         default:
