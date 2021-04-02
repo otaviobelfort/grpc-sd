@@ -117,8 +117,8 @@ server.addService(protoDescriptor.Delivery.service, {
         //console.log(ent);
         
         Array.prototype.push.apply(bd_pedido, entrega);
-      // bd_pedido.Array.prototype.push(entrega);
-         console.log(bd_pedido);
+        // bd_pedido.Array.prototype.push(entrega);
+       //  console.log(bd_pedido);
 
         callback(null, {});
     }

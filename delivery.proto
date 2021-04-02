@@ -8,7 +8,7 @@ message Bebida {
 
 }
 message Entrega {
-    string endereco = 1;
+    string nome = 1;
     string cliente = 2;
     int32 preco = 3;
 
